@@ -17,6 +17,7 @@
   ],
   "scripts": {
     "dev": "node src/index.js",
+    "test": "node tests/unit/MediaWikiUploader.test.js && node tests/unit/utils.test.js",
     "types:build": "tsc -p tsconfig.types.json",
     "lint": "eslint src/",
     "lint:fix": "eslint src/ --fix",
