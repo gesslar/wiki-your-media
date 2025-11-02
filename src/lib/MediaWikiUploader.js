@@ -86,14 +86,12 @@ export default class MediaWikiUploader {
       const {ok,status,statusText} = response
       this.#updateCookies(response.headers)
 
-      console.log(ok, status, statusText)
       Valid.assert(
         ok,
         `HTTP error! status: ${status} - ${statusText}`
       )
 
       const json = await response.json()
-      console.log(JSON.stringify(json))
 
       const result = json?.login?.result
       Valid.assert(
@@ -188,15 +186,10 @@ export default class MediaWikiUploader {
    * Clear authentication state and logout
    */
   logout() {
-    try {
-      // Clear cookies to logout
-      this.#cookies = []
-      this.#loginToken = null
-      this.#csrftoken = null
-      console.error("Logged out from MediaWiki")
-    } catch (error) {
-      console.error("Logout error:", error.message)
-    }
+    // Clear cookies to logout
+    this.#cookies = []
+    this.#loginToken = null
+    this.#csrftoken = null
   }
 
   /**
