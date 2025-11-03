@@ -3,7 +3,7 @@
 import { describe, it } from "node:test"
 import assert from "node:assert/strict"
 
-import { Wikid } from "../../src/index.js"
+import Wikid from "../../src/index.js"
 
 describe("Wikid", () => {
   describe("import", () => {

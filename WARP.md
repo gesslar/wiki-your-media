@@ -50,7 +50,7 @@ npm run update
 Simple, focused package with a single export:
 
 ```javascript
-import { Wikid } from '@gesslar/wikid'
+import Wikid from '@gesslar/wikid'
 ```
 
 ### Key Components
