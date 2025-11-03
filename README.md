@@ -17,7 +17,7 @@ npm install @gesslar/wikid
 ### MediaWiki Authentication & Bot Operations
 
 ```javascript
-import { Wikid } from '@gesslar/wikid';
+import Wikid from '@gesslar/wikid';
 
 const wikid = new Wikid({
   baseUrl: 'https://your-wiki.com',
